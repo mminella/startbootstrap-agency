@@ -197,7 +197,23 @@ fieldset[disabled] .btn-xl.active {
   color: white;
   background-color: #fec503;
 }
+@media (max-width: 768px) {
+  .tales {
+    width: 100%;
+  }
+  .carousel-inner{
+    width:100%;
+    max-height: 750px !important;
+    margin-top: 75px;
+  }
+  #mainNav .navbar-header {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
+  #mainNav .navbar-header {
+    width: 25%;
+  }
   .navbar-custom {
     background-color: transparent;
     padding: 25px 0;
@@ -226,7 +242,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/header/ChildColor.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -743,4 +759,16 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #fed136;
+}
+#mainNav {
+  min-height: 90px;
+}
+#mainNav .container {
+  height: 100%;
+}
+#bs-example-navbar-collapse-1 {
+  margin-top: 10px;
+}
+.logo {
+  height: inherit;
 }
