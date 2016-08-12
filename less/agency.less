@@ -102,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
         .heading-font;
         color: white;
         font-size: 12px;
+        margin-top: 25px;
         &:hover,
         &:focus {
             background-color: @theme-primary;
@@ -167,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    background-image: url('../img/header-bg.jpg');
+    background-image: url('../img/header/ChildColor.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -193,8 +194,24 @@ header {
         }
     }
 }
+@media (max-width: 768px) {
+    .tales {
+        width: 100%;
+    }
+    .carousel-inner{
+        width:100%;
+        max-height: 750px !important;
+        margin-top: 75px;
+    }
+    #mainNav .navbar-header {
+        width: 100%;
+    }
+}
 
 @media(min-width:768px) {
+    #mainNav .navbar-header {
+      width: 25%;
+    }
     header {
         .intro-text {
             padding-top: 300px;
@@ -735,4 +752,71 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @theme-primary;
+}
+
+#mainNav {
+  min-height: 90px;
+}
+#mainNav .container {
+  height: 100%;
+}
+#bs-example-navbar-collapse-1 {
+  margin-top: 10px;
+}
+.logo {
+  height: inherit;
+}
+.contact_info {
+  color: white;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.contact_info a {
+  color: white;
+}
+.quote {
+  border-right: none;
+}
+.hide-bullets {
+  list-style:none;
+  margin-left: -40px;
+  margin-top:20px;
+}
+
+.thumbnail {
+  padding: 0;
+  height: 113px;
+  border: none;
+}
+
+a.thumbnail>img {
+  height: 113px;
+}
+
+//#child_carousel img {
+//  margin-bottom: 0;
+//}
+#page-top .portfolio-slider-thumbs img {
+  height: 90px;
+}
+
+.horizontal_carousel{
+  height: 100%;
+}
+.vertical_carousel{
+  height: 100%;
+  margin: 0 auto;
+}
+#mainNav button {
+  margin-right: 0;
+}
+
+#page-top .portfolio-slider-thumbs ul {
+  margin: 10px auto;
+}
+#page-top .portfolio_carousel_slides {
+  width: 700px;
+  margin: 0 auto;
+}
+#page-top .carousel-control {
+  background-image: none;
 }

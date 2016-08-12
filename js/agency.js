@@ -29,5 +29,67 @@
             top: 100
         }
     })
+    $('#child_carousel_slides').carousel({
+        interval: 5000
+    });
+
+    //Handles the carousel thumbnails
+    $('[id^=child_carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#child_carousel_slides').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+    // When the carousel slides, auto update the text
+    $('#child_carousel_slides').on('slid.bs.carousel', function (e) {
+        var id = $('.item.active').data('slide-number');
+        $('#carousel-text').html($('#slide-content-'+id).html());
+    });
+
+    $('#family_carousel_slides').carousel({
+        interval: 5000
+    });
+
+    //Handles the carousel thumbnails
+    $('[id^=family_carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#family_carousel_slides').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+    // When the carousel slides, auto update the text
+    $('#family_carousel_slides').on('slid.bs.carousel', function (e) {
+        var id = $('.item.active').data('slide-number');
+        $('#carousel-text').html($('#slide-content-'+id).html());
+    });
+
+    $('#engagement_carousel_slides').carousel({
+        interval: 5000
+    });
+
+    //Handles the carousel thumbnails
+    $('[id^=engagement_carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#engagement_carousel_slides').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+    // When the carousel slides, auto update the text
+    $('#engagement_carousel_slides').on('slid.bs.carousel', function (e) {
+        var id = $('.item.active').data('slide-number');
+        $('#carousel-text').html($('#slide-content-'+id).html());
+    });
 
 })(jQuery); // End of use strict
