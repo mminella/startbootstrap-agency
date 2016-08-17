@@ -195,6 +195,9 @@ header {
     }
 }
 @media (max-width: 768px) {
+    #contact .contact_info > a {
+        display: none;
+    }
     .tales {
         width: 100%;
     }
@@ -556,6 +559,10 @@ section#contact {
     background-image: url('../img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
+    font-size: 18px;
+    p {
+        font-size: 18px;
+    }
     .section-heading {
         color: white;
     }
@@ -819,4 +826,21 @@ a.thumbnail>img {
 }
 #page-top .carousel-control {
   background-image: none;
+}
+.contact_info > a {
+    background-color:@theme-primary;
+    border-radius: 3px;
+    padding: 15px;
+    text-transform: uppercase;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 155px;
+}
+.contact_info > a:hover {
+    text-decoration: none;
+}
+
+#city {
+    margin-bottom: 25px;
 }
