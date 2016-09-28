@@ -267,7 +267,7 @@ header .intro-text .intro-heading {
   .carousel-inner {
     width: 100%;
     max-height: 750px !important;
-    margin-top: 75px;
+    margin-top: 85px;
   }
   #mainNav .navbar-header {
     width: 100%;
@@ -635,6 +635,7 @@ section#contact .text-danger {
 footer {
   padding: 25px 0;
   text-align: center;
+  line-height: 12px;
 }
 footer span.copyright {
   line-height: 40px;
@@ -841,4 +842,11 @@ a.thumbnail > img {
 }
 #city {
   margin-bottom: 25px;
+}
+#team em {
+  font-weight: bold;
+}
+.disclaimer {
+  font-size: 10px;
+  padding-top: 0px;
 }
